@@ -1,0 +1,21 @@
+doctype html
+html
+	head
+		title #{title}
+		link(rel='stylesheet', href='/stylesheets/style.css')
+	body
+		h1 #{title}
+		p Enter your name and email address to become a member.
+
+		form(action='/signup', method='post', enctype='multipart/form-data')
+			div
+				label Name
+				input(type='text', name='name')
+			div
+				label Email
+				input(type='text', name='email')
+			div
+				label Profile Image
+				input(type='file', name='profile_image')
+			div
+				input(type='submit')

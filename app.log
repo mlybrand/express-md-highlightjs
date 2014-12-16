@@ -1,0 +1,5 @@
+GET / 200 275 - 322 ms
+GET /javascripts/main.js 200 84 - 7 ms
+GET /stylesheets/style.css 200 141 - 6 ms
+GET /images/logo.png 200 3385 - 1 ms
+GET /favicon.ico 404 - - 2 ms

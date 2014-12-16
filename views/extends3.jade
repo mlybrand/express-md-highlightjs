@@ -1,0 +1,17 @@
+extends layout-demo
+
+mixin skills_list
+	ul
+		each skill in skills
+			li.skill= skill
+
+prepend head
+	script(src='/one.js')
+append head
+	script(src='/two.js')
+
+block content
+	p Inherited Content
+	p hello
+	+skills_list
+

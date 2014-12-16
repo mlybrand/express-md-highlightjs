@@ -1,0 +1,22 @@
+mixin heroes_list(hero)
+	if hero.role == 'captain'
+		li Captain #{hero.name}
+	else
+		li #{hero.name}
+
+doctype html
+html
+	head
+		title Include Examples
+		link(rel="stylesheet", href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/styles/default.min.css")
+	body
+		include includes/header.jade
+		include:md includes/content.md
+		p!= marked(mdText)
+		p ... and here is something original from the Jade file.
+		ul
+			each hero in heroes
+				+heroes_list(hero)
+		include includes/footer.html
+		script(src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/highlight.min.js")
+		script(src="javascripts/main.js")
